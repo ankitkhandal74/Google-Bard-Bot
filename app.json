@@ -15,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/ankitkhandal74",
-    "repository": "https://github.com/ankitkhandal74",
+    "website": "https://github.com/ankitkhandal74/Google-Bard-Bot.git",
+    "repository": "https://github.com/ankitkhandal74/Google-Bard-Bot.git",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
