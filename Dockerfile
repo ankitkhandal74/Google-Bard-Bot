@@ -6,7 +6,7 @@ COPY requirements.txt /requirements.txt
 
 RUN cd /
 RUN pip3 install -U pip && pip3 install -U -r requirements.txt
-RUN mkdir -p /Google-Bard-Bot
+RUN mkdir /Google-Bard-Bot
 WORKDIR /Google-Bard-Bot
 COPY start.sh /start.sh
 CMD ["python bot.py"]
