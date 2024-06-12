@@ -1,7 +1,22 @@
+#!/bin/bash
+
+# Print the current working directory
+echo "Current working directory: $(pwd)"
+
+# List files in the current directory
+echo "Contents of current directory:"
+ls -la
+
 # Remove the directory if it exists
 if [ -d "/Google-Bard-Bot" ]; then
   echo "Removing existing /Google-Bard-Bot directory"
   rm -rf /Google-Bard-Bot
+fi
+
+# Ensure the directory was removed
+if [ -d "/Google-Bard-Bot" ]; then
+  echo "Failed to remove /Google-Bard-Bot"
+  exit 1
 fi
 
 # Clone the repository
@@ -14,7 +29,12 @@ else
 fi
 
 # Change to the repository directory
-cd /Google-Bard-Bot || { echo "Failed to change directory to /Google-Bard-Bot"; exit 1; }
+if cd /Google-Bard-Bot; then
+  echo "Changed directory to /Google-Bard-Bot"
+else
+  echo "Failed to change directory to /Google-Bard-Bot"
+  exit 1
+fi
 
 # Check if requirements.txt exists
 if [ -f "requirements.txt" ]; then
