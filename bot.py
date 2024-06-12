@@ -1,4 +1,4 @@
-from info import Config
+from info import *
 from pyrogram import Client, filters
 import os
 import logging 
