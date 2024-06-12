@@ -20,19 +20,19 @@
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",
-            "required": true
+            "required": false
         },
         "API_ID": {
             "description": "Get this value from https://my.telegram.org",
-            "required": true
+            "required": false
         },
         "API_HASH": {
             "description": "Get this value from https://my.telegram.org",
-            "required": true
+            "required": false
         },
         "ADMINS": {
             "description": "Username or ID of Admin. Separate multiple Admins by space.",
-            "required": true
+            "required": false
         },
         "PICS": {
             "description": "Add some telegraph link of pictures .",
