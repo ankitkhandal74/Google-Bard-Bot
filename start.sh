@@ -1,12 +1,7 @@
-if [ -z $UPSTREAM_REPO ]
-then
- echo "Cloning main Repository"
- git clone https://github.com/ankitkhandal74/Google-Bard-Bot.git /Google-Bard-Bot
-else
-echo "Cloning Custom Repo from $UPSTREAM_REPO "
- git clone $UPSTREAM_REPO /Google-Bard-Bot
+if [ -d "/Google-Bard-Bot" ]; then
+    rm -rf /Google-Bard-Bot
 fi
-cd /Google-Bard-Bot
+git clone https://github.com/ankitkhandal74/Google-Bard-Bot /Google-Bard-Bot
 pip3 install -U -r requirements.txt
 echo "Starting Google bard"
 python bot.py
